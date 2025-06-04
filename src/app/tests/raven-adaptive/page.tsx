@@ -73,7 +73,7 @@ export default function RavenTenItemTest() {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [isLoading, currentItem, timeLeft, isCorrect]);
+  }, [isLoading, currentItem, timeLeft, isCorrect, handleTimeUp]);
 
   const handleTimeUp = useCallback(() => {
     if (!currentItem || isCorrect !== null) return;
