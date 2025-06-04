@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link"; // Ensure Link is imported
+import Link from "next/link"; // Used for internal test links
 
-// Define an interface for the test items
 interface TestItem {
   id: string;
   name: string;
@@ -11,7 +10,6 @@ interface TestItem {
   slug: string;
 }
 
-// Array of tests (same as previously defined for the dashboard)
 const tests: TestItem[] = [
   {
     id: '1',
@@ -23,80 +21,88 @@ const tests: TestItem[] = [
   },
   {
     id: '2',
+    name: 'Raven Adaptive Matrix',
+    description: 'Test di ragionamento fluido',
+    duration: '~10min',
+    details: 'Adaptive Raven-style matrices with addition & rotation rules',
+    slug: 'raven-adaptive',
+  },
+  {
+    id: '3',
     name: 'Gs/Gsr + Gp',
     description: '',
-    duration: '5’',
+    duration: '5min',
     details: '3-min PVT (reazione)',
     slug: 'gs-gsr-gp',
   },
   {
-    id: '3',
+    id: '4',
     name: 'Gsm/WM + Ga',
     description: '',
-    duration: '3’',
+    duration: '3min',
     details: 'Adaptive Dual-N Back',
     slug: 'gsm-wm-ga',
   },
   {
-    id: '4',
+    id: '5',
     name: 'EF – inibizione',
     description: '',
-    duration: '4’',
+    duration: '4min',
     details: 'Stop-Signal Adaptive (RT+SSD random)',
     slug: 'ef-inibizione',
   },
   {
-    id: '5',
+    id: '6',
     name: 'EF – flessibilità',
     description: '',
-    duration: '4’',
+    duration: '4min',
     details: 'Colour-Shape Switch (random switch rate)',
     slug: 'ef-flessibilita',
   },
   {
-    id: '6',
+    id: '7',
     name: 'Glr',
     description: '',
-    duration: '4’',
+    duration: '4min',
     details: 'Paired-Associate Abstract',
     slug: 'glr',
   },
   {
-    id: '7',
+    id: '8',
     name: 'Gv',
     description: '',
-    duration: '4’',
+    duration: '4min',
     details: '3-D Mental Rotation procedurale',
     slug: 'gv',
   },
   {
-    id: '8',
+    id: '9',
     name: 'Gc',
     description: '',
-    duration: '4’',
+    duration: '4min',
     details: 'Lexical Decision Adaptivo',
     slug: 'gc',
   },
   {
-    id: '9',
+    id: '10',
     name: 'Cognizione sociale',
     description: '',
-    duration: '4’',
+    duration: '4min',
     details: 'Dynamic Emotion Recognition GAN',
     slug: 'cognizione-sociale',
   },
   {
-    id: '10',
+    id: '11',
     name: 'Vigilanza/motivazione',
     description: '',
-    duration: '4’',
+    duration: '4min',
     details: 'Short CPT (1-back, 140 stim)',
     slug: 'vigilanza-motivazione',
   },
 ];
 
 export default function Home() {
-  return (
+  return ( // Corrected: Ensured no stray characters after the opening parenthesis
     <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] font-[family-name:var(--font-geist-sans)]">
       <header className="p-8 border-b border-black/[.1] dark:border-white/[.1]">
         <div className="container mx-auto flex flex-col items-center sm:flex-row sm:justify-between">
@@ -144,7 +150,6 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Section for Test List */}
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {tests.map((test) => (
@@ -167,7 +172,7 @@ export default function Home() {
                   <strong>Duration:</strong> {test.duration}
                 </p>
                 <Link
-                  href={`/tests/${test.slug}`} // Links will point to /tests/test-name
+                  href={`/tests/${test.slug}`}
                   className="inline-block bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300 text-sm font-medium"
                 >
                   Start Test
@@ -182,7 +187,6 @@ export default function Home() {
           <p className="text-sm opacity-70 mb-6">The default content from Create Next App is preserved below for reference.</p>
         </div>
         
-        {/* Original content from create-next-app for reference, slightly restyled */}
         <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center p-8 pb-12 gap-12 sm:p-12 border border-dashed border-black/[.1] dark:border-white/[.1] rounded-lg">
           <div className="flex flex-col gap-[24px] row-start-2 items-center sm:items-start">
             <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
@@ -215,7 +219,7 @@ export default function Home() {
             </a>
             <a
               className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-sm"
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
             >
