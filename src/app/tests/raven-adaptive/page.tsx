@@ -61,20 +61,6 @@ export default function RavenTenItemTest() {
     loadNewItem();
   }, [loadNewItem]);
 
-  useEffect(() => {
-    if (!isLoading && currentItem && timeLeft > 0 && isCorrect === null) {
-      timerRef.current = setInterval(() => {
-        setTimeLeft(prev => prev - 1);
-      }, 1000);
-    } else if (timeLeft === 0 && isCorrect === null) {
-      if (timerRef.current) clearInterval(timerRef.current);
-      handleTimeUp();
-    }
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
-  }, [isLoading, currentItem, timeLeft, isCorrect, handleTimeUp]);
-
   const handleTimeUp = useCallback(() => {
     if (!currentItem || isCorrect !== null) return;
 
@@ -89,6 +75,20 @@ export default function RavenTenItemTest() {
       loadNewItem();
     }, FEEDBACK_DURATION_MS);
   }, [currentItem, isCorrect, loadNewItem]);
+
+  useEffect(() => {
+    if (!isLoading && currentItem && timeLeft > 0 && isCorrect === null) {
+      timerRef.current = setInterval(() => {
+        setTimeLeft(prev => prev - 1);
+      }, 1000);
+    } else if (timeLeft === 0 && isCorrect === null) {
+      if (timerRef.current) clearInterval(timerRef.current);
+      handleTimeUp();
+    }
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [isLoading, currentItem, timeLeft, isCorrect, handleTimeUp]);
 
   const handleOptionSelect = (selectedIndex: number) => {
     if (!currentItem || isCorrect !== null) return;
