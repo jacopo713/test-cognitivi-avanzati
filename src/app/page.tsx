@@ -13,19 +13,19 @@ interface TestItem {
 const tests: TestItem[] = [
   {
     id: '1',
-    name: 'Abilità dominante (CHC)',
-    description: 'Test perfezionato',
-    duration: '~1Gf',
-    details: 'Procedural Matrix CAT (8-12 item)',
-    slug: 'abilita-dominante-chc',
-  },
-  {
-    id: '2',
     name: 'Raven Adaptive Matrix',
     description: 'Test di ragionamento fluido',
     duration: '~10min',
     details: 'Adaptive Raven-style matrices with addition & rotation rules',
     slug: 'raven-adaptive',
+  },
+  {
+    id: '2',
+    name: 'Abilità dominante (CHC)',
+    description: 'Test perfezionato',
+    duration: '~1Gf',
+    details: 'Procedural Matrix CAT (8-12 item)',
+    slug: 'abilita-dominante-chc',
   },
   {
     id: '3',
