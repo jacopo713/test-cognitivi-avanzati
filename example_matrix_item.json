@@ -1,0 +1,30 @@
+{
+  "matrix_cells": [
+    "<base64_image_data_placeholder_cell_1>",
+    "<base64_image_data_placeholder_cell_2>",
+    "<base64_image_data_placeholder_cell_3>",
+    "<base64_image_data_placeholder_cell_4>",
+    "<base64_image_data_placeholder_cell_5>",
+    "<base64_image_data_placeholder_cell_6>",
+    "<base64_image_data_placeholder_cell_7>",
+    "<base64_image_data_placeholder_cell_8>"
+  ],
+  "options": [
+    "<base64_image_data_placeholder_option_1>",
+    "<base64_image_data_placeholder_option_2>",
+    "<base64_image_data_placeholder_option_3>",
+    "<base64_image_data_placeholder_option_4>",
+    "<base64_image_data_placeholder_option_5>",
+    "<base64_image_data_placeholder_option_6>",
+    "<base64_image_data_placeholder_option_7>",
+    "<base64_image_data_placeholder_option_8>"
+  ],
+  "metadata": {
+    "rules": ["addition", "rotation_90"],
+    "difficulty_estimate": 0.5,
+    "correct_option_index": 3, 
+    "seed": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+    "creation_timestamp": "2025-06-04T12:00:00.000Z",
+    "render_engine": "SVG-v1"
+  }
+}
